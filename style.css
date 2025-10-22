@@ -1,12 +1,54 @@
+body {}
+
+.material-symbols-outlined {
+  vertical-align: middle;
+  font-size: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+
+  h1 {
+    margin: 0;
+  }
+}
+
 .play-pause {
   cursor: pointer;
 }
 
 article {
   display: flex;
+  justify-content: space-between;
+
+  section:first-child {
+    min-width: 50%;
+    padding: 1vh 1vw;
+
+    img {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+
+  section:last-child {
+    margin-left: 10vw;
+    min-width: 300px;
+    padding: 1vh 1vw;
+  }
 }
 
 main>nav {
   display: flex;
   flex-direction: column;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
 }

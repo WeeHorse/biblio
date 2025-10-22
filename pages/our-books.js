@@ -7,7 +7,7 @@ export async function ourBooks() {
   return `
     <h2>Our books</h2>
     <nav>
-      <a href="#responsibilities">Responsibilities by William Butler Yeats</a>
+      <a href="#responsibilities"><span class="material-symbols-outlined">book_5</span> Responsibilities <em>by William Butler Yeats</em></a>
       ${menuHTML}
     </nav>
   `;

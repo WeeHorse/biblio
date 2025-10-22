@@ -1,6 +1,7 @@
 import { home } from './pages/home.js';
 import { ourBooks } from './pages/our-books.js';
 import { responsibilities } from './pages/books/responsibilities.js';
+import { showBook } from './books.js';
 
 
 async function router() {
@@ -21,8 +22,16 @@ async function router() {
     case '': // home
       document.querySelector('main').innerHTML = home();
       break;
+
     default:
-      document.querySelector('main').innerHTML = "<h2>Page not found 404</h2>";
+      // book menu
+      if (page.startsWith('books')) {
+        document.querySelector('main').innerHTML = await showBook(page);
+
+      } else {
+        // 404
+        document.querySelector('main').innerHTML = "<h2>Page not found 404</h2>";
+      }
   }
 
 
