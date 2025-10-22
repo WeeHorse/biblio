@@ -7,9 +7,11 @@ export function play(el) {
   if (!playing) {
     player.src = url;
     player.play();
+    el.textContent = 'pause';
     playing = true;
   } else {
     player.pause();
+    el.textContent = 'play_arrow';
     playing = false;
   }
 
