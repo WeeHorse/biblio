@@ -1,9 +1,12 @@
-
-
 .play-pause {
   cursor: pointer;
 }
 
 article {
   display: flex;
+}
+
+main>nav {
+  display: flex;
+  flex-direction: column;
 }

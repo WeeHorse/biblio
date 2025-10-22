@@ -3,14 +3,14 @@ import { ourBooks } from './pages/our-books.js';
 import { responsibilities } from './pages/books/responsibilities.js';
 
 
-function router() {
+async function router() {
   console.log("routing to... " + location.hash);
 
   let page = location.hash.replace('#', '');
 
   switch (page) {
     case 'our-books':
-      document.querySelector('main').innerHTML = ourBooks();
+      document.querySelector('main').innerHTML = await ourBooks();
       break;
 
     // books:
